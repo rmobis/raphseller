@@ -11,11 +11,6 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-
-Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+/* None, we'll be using annotations.
+ * See App\Providers\AnnotationsServiceProvider for more.
+ */

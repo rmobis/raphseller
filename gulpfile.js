@@ -13,15 +13,32 @@ require('laravel-elixir-jshint');
  */
 
 elixir(function(mixx) {
-	mixx.sass('raphseller.scss')
-		.jshint([
-			'public/js/**/*.js',
-    		'!public/js/vendor/**/*.js'
-    	])
+	mixx
+		.sass('raphseller.scss')
+    	/* JavaScript */
 		.copy(
 			'vendor/bower_components/jquery/dist/jquery.min.js',
 			'public/js/vendor/jquery.js'
 		)
+		.copy(
+			'vendor/bower_components/jquery-throttle-debounce/jquery.ba-throttle-debounce.js',
+			'public/js/vendor/jquery.ba-throttle-debounce.js'
+		)
+		.copy(
+			'vendor/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
+			'public/js/vendor/bootstrap-alert.js'
+		)
+		.jshint([
+			'public/js/**/*.js',
+    		'!public/js/vendor/**/*.js',
+    		'!**/raphseller.js'
+    	])
+		.scripts([
+			'js/vendor/bootstrap-alert.js',
+			'js/vendor/jquery.ba-throttle-debounce.js'
+		], null, 'public/js/raphseller.js')
+
+		/* SASS/CSS */
 		.copy(
 			'vendor/bower_components/bootstrap-sass-official/assets/fonts/bootstrap',
 			'public/css/fonts'
@@ -29,5 +46,12 @@ elixir(function(mixx) {
 		.copy(
 			'vendor/bower_components/bootstrap-sass-official/assets/stylesheets',
 			'resources/assets/sass/vendor'
-		);
+		)
+
+		/* Cache Busting */
+		.version([
+			'public/css/raphseller.css',
+			'public/js/raphseller.js',
+			'public/js/pages/order.create.js'
+		]);
 });

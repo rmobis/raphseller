@@ -102,6 +102,10 @@ return [
 	|
 	*/
 
-	'attributes' => [],
+	'attributes' => [
+		'license-days' => 'license days amount',
+		'email'        => 'e-mail address',
+		'username'     => 'forum username',
+	],
 
 ];
