@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+require('laravel-elixir-jshint');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,6 +12,22 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir(function(mix) {
-    mix.less('app.less');
+elixir(function(mixx) {
+	mixx.sass('raphseller.scss')
+		.jshint([
+			'public/js/**/*.js',
+    		'!public/js/vendor/**/*.js'
+    	])
+		.copy(
+			'vendor/bower_components/jquery/dist/jquery.min.js',
+			'public/js/vendor/jquery.js'
+		)
+		.copy(
+			'vendor/bower_components/bootstrap-sass-official/assets/fonts/bootstrap',
+			'public/css/fonts'
+		)
+		.copy(
+			'vendor/bower_components/bootstrap-sass-official/assets/stylesheets',
+			'resources/assets/sass/vendor'
+		)
 });
