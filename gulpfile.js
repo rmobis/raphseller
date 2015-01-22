@@ -29,5 +29,5 @@ elixir(function(mixx) {
 		.copy(
 			'vendor/bower_components/bootstrap-sass-official/assets/stylesheets',
 			'resources/assets/sass/vendor'
-		)
+		);
 });
