@@ -56,4 +56,5 @@ vendor/
 public/build
 public/css
 public/js
+public/img
 resources/sass/vendor
