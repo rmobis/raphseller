@@ -36,7 +36,7 @@
 							<h3 class="masthead-brand">RaphSeller</h3>
 							<nav>
 								<ul class="nav masthead-nav">
-									<li @if(Route::is('store.index')) class="active" @endif>
+									<li @if(Route::is('order.create')) class="active" @endif>
 										<a href="#">{{ trans('header.menu-store') }}</a>
 									</li>
 									<li @if(Route::is('help.index')) class="active" @endif>
