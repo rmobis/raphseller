@@ -8,6 +8,8 @@ developed by some cool people.
 
 - Add better error handling for PayPal API calls.
 - Add better error handling for WindBot API calls.
-- Enable localization for Polish and Spanish. 
+- Prevent purchases when low remaining balance.
+- Enable localization for Polish and Spanish.
 - Add PHP Code Sniffer checks.
 - Send email reports.
+- Make Help page.
