@@ -1,6 +1,5 @@
 <?php namespace App\Apis\PayPal;
 
-use Rhumsaa\Uuid\Uuid;
 use PayPal\Api\Amount;
 use PayPal\Api\Details;
 use PayPal\Api\ExecutePayment;
