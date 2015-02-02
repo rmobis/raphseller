@@ -153,6 +153,7 @@ return [
 		'App\Providers\RouteServiceProvider',
 		'App\Providers\AnnotationsServiceProvider',
 		'App\Apis\PayPal\PayPalServiceProvider',
+		'App\Apis\WindBot\WindBotServiceProvider',
 
 	],
 

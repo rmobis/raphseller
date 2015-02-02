@@ -5,6 +5,7 @@ use Request;
 
 use App\Order;
 use App\Apis\PayPal\PayPal;
+use App\Apis\WindBot\WindBot;
 use App\Http\Requests\StoreOrderRequest;
 
 use PayPal\Rest\ApiContext;
@@ -25,18 +26,26 @@ class OrdersController extends Controller {
 	/**
 	 * PayPal object.
 	 * 
-	 * @var App\PayPal\PayPal
+	 * @var App\Apis\PayPal\PayPal
 	 */
 	public $paypal;
+
+	/**
+	 * WindBot object.
+	 * 
+	 * @var App\Apis\WindBot\WindBot
+	 */
+	public $windbot;
 
 	/**
 	 * Default constructor.
 	 * 
 	 * @param App\PayPal\PayPal
 	 */
-	public function __construct(PayPal $paypal)
+	public function __construct(PayPal $paypal, WindBot $windbot)
 	{
 		$this->paypal = $paypal;
+		$this->windbot = $windbot;
 	}
 
 	/**
@@ -81,7 +90,16 @@ class OrdersController extends Controller {
 		$order = Order::find($payment->getTransactions()[0]->getInvoiceNumber());
 		$order->approve();
 
-		return view('pages.order.approve', compact('order'));
+		if ($this->windbot->addLicenseDays($order->user, $order->days))
+		{
+			$order->deliver();
+			return view('pages.order.approve', compact('order'));
+		}
+		else
+		{
+			\Log::error($order);
+			return view('pages.order.issue', compact('order'));
+		}
 	}
 
 	/**

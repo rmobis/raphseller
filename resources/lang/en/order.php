@@ -36,6 +36,21 @@ return [
 
 	'congratulations'     => 'Congratulations!',
 	'paymentApproved'     => 'Your payment has been approved and <b>:days license days</b> have been added to your WindBot account <b>:account</b>.',
-	'helpInfo'            => 'Should you have any doubt, do not hesitate to contact us through e-mail at <a href="mailto:support@raphseller.com">support@raphseller.com</a>.'
+	'helpInfo'            => 'Should you have any doubt, do not hesitate to contact us through e-mail at <a href="mailto:support@raphseller.com">support@raphseller.com</a>.',
+
+
+	/*
+	|--------------------------------------------------------------------------
+	| Order Issue Page Language Lines
+	|--------------------------------------------------------------------------
+	|
+	| The following language lines contain the messages used in the order
+	| issue page.
+	|
+	*/
+
+	'issueTitle'          => 'Ooops!',
+	'issueText'           => 'Even though your payment was approved, we had a problem adding days to your account.',
+	'issueContact'        => 'Please contact us through e-mail at <a href="mailto:support@raphseller.com">support@raphseller.com</a> to solve this.',
 
 ];
