@@ -5,9 +5,9 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "~5.0",
-		"illuminate/html": "~5.0",
-		"adamgoose/laravel-annotations": "~5.0"
+		"laravel/framework": "5.0.*@dev",
+		"illuminate/html": "5.0.*@dev",
+		"adamgoose/laravel-annotations": "5.0.*@dev"
 	},
 	"require-dev": {
 	},
@@ -35,6 +35,5 @@
 	},
 	"config": {
 		"preferred-install": "dist"
-	},
-	"minimum-stability": "dev"
+	}
 }
