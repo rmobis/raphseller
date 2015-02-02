@@ -27,7 +27,7 @@ class Order extends Model {
 	/**
 	 * Cost, in U.S. dollars, of a 90 days license.
 	 */
-	const NINETY_DAYS_LICENSE = 18;
+	const NINETY_DAYS_LICENSE = 20;
 
 	/**
 	 * The primary key for the model.
