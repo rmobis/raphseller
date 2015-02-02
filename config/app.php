@@ -139,6 +139,8 @@ return [
 		/*
 		 * Package Service Providers...
 		 */
+		'Barryvdh\Debugbar\ServiceProvider',
+		'GrahamCampbell\Exceptions\ExceptionsServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
 
 		/*
@@ -202,6 +204,7 @@ return [
 		/*
 		 * Packages Facades...
 		 */
+		'Debugbar'  => 'Barryvdh\Debugbar\Facade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
 		'Form'      => 'Illuminate\Html\FormFacade',
 

@@ -7,7 +7,9 @@
 	"require": {
 		"laravel/framework": "5.0.*@dev",
 		"illuminate/html": "5.0.*@dev",
-		"adamgoose/laravel-annotations": "5.0.*@dev"
+		"adamgoose/laravel-annotations": "5.0.*@dev",
+		"barryvdh/laravel-debugbar": "2.0.*@dev",
+		"graham-campbell/exceptions": "0.1.*@dev"
 	},
 	"require-dev": {
 	},
