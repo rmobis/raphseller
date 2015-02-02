@@ -33,7 +33,11 @@
 
 					<div class="masthead clearfix">
 						<div class="inner">
-							<h3 class="masthead-brand">RaphSeller</h3>
+							<h3 class="masthead-brand">
+								RaphSeller
+								<span class="release">&alpha;</span>
+							</h3>
+
 							<nav>
 								<ul class="nav masthead-nav">
 									<li @if(Route::is('order.create') || Route::is('order.approve')) class="active" @endif>
