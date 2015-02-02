@@ -54,7 +54,8 @@ class OrdersController extends Controller {
 	
 	/**
 	 * @Get("/order/cancel", as="order.cancel")
-	 * @return [type] [description]
+	 *
+	 * @return Response
 	 */
 	public function cancel()
 	{
@@ -67,7 +68,8 @@ class OrdersController extends Controller {
 
 	/**
 	 * @Get("/order/approve", as="order.approve")
-	 * @return [type] [description]
+	 *
+	 * @return Response
 	 */
 	public function approve()
 	{
