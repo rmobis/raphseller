@@ -36,8 +36,8 @@
 							<h3 class="masthead-brand">RaphSeller</h3>
 							<nav>
 								<ul class="nav masthead-nav">
-									<li @if(Route::is('order.create')) class="active" @endif>
-										<a href="#">{{ trans('header.menu-store') }}</a>
+									<li @if(Route::is('order.create') || Route::is('order.approve')) class="active" @endif>
+										<a href="{{ route('order.create') }}">{{ trans('header.menu-store') }}</a>
 									</li>
 									<li @if(Route::is('help.index')) class="active" @endif>
 										<a href="#">{{ trans('header.menu-help') }}</a>
@@ -53,6 +53,16 @@
 							<strong>Ooops!</strong>
 							@foreach($errors->all() as $error)
 								<br>{{ $error }}
+							@endforeach
+						</div>
+					@endif
+
+					@if($warnings = Session::get('warnings', false))
+						<div class="alert alert-warning alert-dismissible">
+							<button type="button" class="close" data-dismiss="alert" ><span>&times;</span></button>
+							<strong>Ohh...</strong>
+							@foreach($warnings->all() as $warning)
+								<br>{{ $warning }}
 							@endforeach
 						</div>
 					@endif

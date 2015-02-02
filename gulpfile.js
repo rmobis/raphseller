@@ -38,7 +38,7 @@ elixir(function(mixx) {
 			'public/js/vendor/jquery.js'
 		)
 		.copy(
-			'vendor/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/bootstrap-alert.js',
+			'vendor/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
 			'public/js/vendor/bootstrap-alert.js'
 		)
 		.copy(

@@ -9,12 +9,12 @@
 			<div class="license" data-days="30">
 				<p>WindBot - {{ trans('order.licenseDays', ['days' => 30]) }}</p>
 				<img src="/img/windbot-logo.png">
-				<p>$8</p>
+				<p>${{ App\Order::THIRTY_DAYS_LICENSE }}</p>
 			</div>
 			<div class="license" data-days="90">
 				<p>WindBot - {{ trans('order.licenseDays', ['days' => 90]) }}</p>
 				<img src="/img/windbot-tri-logo.png">
-				<p>$18</p>
+				<p>${{ App\Order::NINETY_DAYS_LICENSE }}</p>
 			</div>
 		</div>
 		<div class="step step-two">
