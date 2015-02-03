@@ -1,23 +1,14 @@
 <?php namespace App\Http\Controllers;
 
+use Log;
 use Input;
 use Request;
 
 use App\Order;
 use App\Apis\PayPal\PayPal;
 use App\Apis\WindBot\WindBot;
+use App\Apis\WindBot\WindBotResponse;
 use App\Http\Requests\StoreOrderRequest;
-
-use PayPal\Rest\ApiContext;
-use PayPal\Auth\OAuthTokenCredential;
-use PayPal\Api\Payer;
-use PayPal\Api\Item;
-use PayPal\Api\ItemList;
-use PayPal\Api\Details;
-use PayPal\Api\Amount;
-use PayPal\Api\Transaction;
-use PayPal\Api\RedirectUrls;
-use PayPal\Api\Payment;
 
 use Illuminate\Support\Collection;
 
@@ -90,15 +81,20 @@ class OrdersController extends Controller {
 		$order = Order::find($payment->getTransactions()[0]->getInvoiceNumber());
 		$order->approve();
 
-		if ($this->windbot->addLicenseDays($order->user, $order->days))
+		$response = $this->windbot->addLicenseDays($order->user, $order->days);
+		$status = $response->getStats();
+
+		if ($status == WindBotResponse::STATUS_OK)
 		{
 			$order->deliver();
 			return view('pages.order.approve', compact('order'));
 		}
 		else
 		{
-			\Log::error($order);
-			return view('pages.order.issue', compact('order'));
+			Log::error($order);
+			Log::error($status);
+			Log::error($response->getBalance());
+			return view('pages.order.issue', compact('order', 'status'));
 		}
 	}
 

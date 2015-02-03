@@ -55,22 +55,7 @@ class WindBot {
 			return false;
 		}
 
-		return $this->parseResponse($response);
-	}
-
-	/**
-	 * Parses the response from the API and returns whether it was successful
-	 * or not.
-	 * 
-	 * @param  Response
-	 * 
-	 * @return bool
-	 */
-	private function parseResponse(Response $response)
-	{
-		$text = (string) $response->getBody();
-
-		return strpos($text, 'Payment made successfully') !== false;
+		return new WindBotResponse($response);
 	}
 
 }

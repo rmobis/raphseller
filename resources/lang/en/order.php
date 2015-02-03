@@ -50,7 +50,10 @@ return [
 	*/
 
 	'issueTitle'          => 'Ooops!',
-	'issueText'           => 'Even though your payment was approved, we had a problem adding days to your account.',
+	'issueApproved'       => 'Sorry, even though your payment was approved and correctly charged, we ran into a problem.',
+	'externalIssueText'   => 'There seems to be a problem with our connection to WindBot API servers.',
+	'invalidUserText'     => 'We couldn\'t find a user named \':user\' on WindBot forums.',
+	'noBalanceText'       => 'It seems our stock of licenses just ran out!',
 	'issueContact'        => 'Please contact us through e-mail at <a href="mailto:support@raphseller.com">support@raphseller.com</a> to solve this.',
 
 ];
