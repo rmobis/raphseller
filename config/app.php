@@ -150,6 +150,7 @@ return [
 		'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
+		'App\Providers\HttpsServiceProvider',
 		'App\Providers\RouteServiceProvider',
 		'App\Providers\AnnotationsServiceProvider',
 		'App\Apis\PayPal\PayPalServiceProvider',
