@@ -32,7 +32,7 @@ elixir(function(mixx) {
 		.scripts([
 			'js/vendor/bootstrap-alert.js',
 			'js/vendor/jquery.ba-throttle-debounce.js'
-		], null, 'public/js/raphseller.js')
+		], 'public/js/raphseller.js', 'public')
 		.copy(
 			'vendor/bower_components/jquery/dist/jquery.min.js',
 			'public/js/vendor/jquery.js'
