@@ -35,7 +35,7 @@
 						<div class="inner">
 							<h3 class="masthead-brand">
 								RaphSeller
-								<span class="release">&alpha;</span>
+								<span class="release">&beta;</span>
 							</h3>
 
 							<nav>
