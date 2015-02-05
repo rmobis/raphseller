@@ -7,7 +7,7 @@ use Request;
 use App\Order;
 use App\Apis\PayPal\PayPal;
 use App\Apis\WindBot\WindBot;
-use App\Apis\WindBot\WindBotResponse;
+use App\Apis\WindBot\Response as WindResponse;
 use App\Http\Requests\StoreOrderRequest;
 
 use Illuminate\Support\Collection;
@@ -84,7 +84,7 @@ class OrdersController extends Controller {
 		$response = $this->windbot->addLicenseDays($order->user, $order->days);
 		$status = $response->getStatus();
 
-		if ($status == WindBotResponse::STATUS_OK)
+		if ($status == WindResponse::STATUS_OK)
 		{
 			$order->deliver();
 			return view('pages.order.approve', compact('order'));

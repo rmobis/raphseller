@@ -2,6 +2,7 @@
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Message\Response;
+use GuzzleHttp\Exception\RequestException;
 
 class WindBot {
 
@@ -15,7 +16,7 @@ class WindBot {
 	 * 
 	 * @var GuzzleHttp\Client
 	 */
-	public $client;
+	private $client;
 
 	/**
 	 * Default constructor.
@@ -40,7 +41,7 @@ class WindBot {
 	 * @param  string
 	 * @param  string
 	 * 
-	 * @return bool
+	 * @return PaymentResponse
 	 */
 	public function addLicenseDays($user, $days)
 	{
@@ -52,10 +53,10 @@ class WindBot {
 				]
 			]);
 		} catch (RequestException $e) {
-			return false;
+			return new PaymentResponse($e->getResponse());
 		}
 
-		return new WindBotResponse($response);
+		return new PaymentResponse($response);
 	}
 
 }

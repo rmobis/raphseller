@@ -5,11 +5,11 @@
 	<h1>{{ trans('order.issueTitle') }}</h1>
 	<p>{!! trans('order.issueApproved') !!}</p>
 	<p>
-		@if($status == \App\Apis\WindBot\WindBotResponse::STATUS_EXTERNAL_ERROR)
+		@if($status == \App\Apis\WindBot\Response::STATUS_EXTERNAL_ERROR)
 			{!! trans('order.externalIssueText') !!}
-		@elseif($status == \App\Apis\WindBot\WindBotResponse::STATUS_INVALID_USER)
+		@elseif($status == \App\Apis\WindBot\Response::STATUS_INVALID_USER)
 			{!! trans('order.invalidUserText', ['user' => $order->user]) !!}
-		@elseif($status == \App\Apis\WindBot\WindBotResponse::STATUS_NO_BALANCE)
+		@elseif($status == \App\Apis\WindBot\Response::STATUS_NO_BALANCE)
 			{!! trans('order.noBalanceText') !!}
 		@endif
 	</p>
