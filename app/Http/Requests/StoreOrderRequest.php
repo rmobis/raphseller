@@ -42,7 +42,7 @@ class StoreOrderRequest extends Request {
 			'username' => [
 				'required',
 				/* TODO: Check the exact rules for usernames on forum. */
-				'regex:/^[a-zA-z]{3,}$/',
+				'regex:/^[ a-zA-z]{3,}$/',
 				'min:3',
 			],
 		];
