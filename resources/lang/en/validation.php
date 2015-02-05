@@ -74,6 +74,8 @@ return [
 	"url"                  => "The :attribute format is invalid.",
 	"timezone"             => "The :attribute must be a valid zone.",
 
+	"user"                 => "The :attribute either doesn't exist or is still awaiting email confirmation.",
+
 	/*
 	|--------------------------------------------------------------------------
 	| Custom Validation Language Lines

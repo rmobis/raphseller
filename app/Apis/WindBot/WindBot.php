@@ -59,4 +59,26 @@ class WindBot {
 		return new PaymentResponse($response);
 	}
 
+	/**
+	 * Fetches a WindBot user information.
+	 * 
+	 * @param  string
+	 * 
+	 * @return CheckUserResponse
+	 */
+	public function fetchUser($user) {
+		try {
+			$response = $this->client->get(null, [
+				'query' => [
+					'user'      => $user,
+					'checkuser' => true
+				]
+			]);
+		} catch (RequestException $e) {
+			return new FetchUserResponse($e->getResponse());
+		}
+
+		return new FetchUserResponse($response);
+	}
+
 }

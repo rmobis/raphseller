@@ -25,6 +25,28 @@ class WindBotServiceProvider extends ServiceProvider {
 	}
 
 	/**
+	 * Bootstrap any application services.
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{
+		$this->app->validator->extend('user', function($attribute, $value, $parameters) {
+			$windbot = $this->app->make('App\Apis\WindBot\WindBot');
+
+			$response = $windbot->fetchUser($value);
+
+			if ($response->getStatus() === Response::STATUS_INVALID_USER) {
+				return false;
+			}
+
+			$user = $response->getUser();
+			
+			return $user->usergroupid !== 3;
+		});
+	}
+
+	/**
 	 * Get the services provided by the provider.
 	 *
 	 * @return array
