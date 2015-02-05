@@ -82,7 +82,7 @@ class OrdersController extends Controller {
 		$order->approve();
 
 		$response = $this->windbot->addLicenseDays($order->user, $order->days);
-		$status = $response->getStats();
+		$status = $response->getStatus();
 
 		if ($status == WindBotResponse::STATUS_OK)
 		{
