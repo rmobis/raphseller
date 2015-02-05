@@ -16,6 +16,3 @@
 	<p>{!! trans('order.issueContact') !!}</p>
 </div>
 @stop
-
-@section('extraScripts')
-@stop

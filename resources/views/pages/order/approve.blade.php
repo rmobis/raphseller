@@ -7,6 +7,3 @@
 	<p>{!! trans('order.helpInfo') !!}</p>
 </div>
 @stop
-
-@section('extraScripts')
-@stop
