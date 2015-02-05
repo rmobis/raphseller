@@ -2,7 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class HttpsServiceProvider extends ServiceProvider {
+class SchemaServiceProvider extends ServiceProvider {
 
 	/**
 	 * Bootstrap the application services.
@@ -11,9 +11,7 @@ class HttpsServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		if ($this->app->request->isSecure()) {
-			$this->app->url->forceSchema('https');
-		}
+		$this->app->url->forceSchema(env('APP_SCHEMA'));
 	}
 
 	/**
