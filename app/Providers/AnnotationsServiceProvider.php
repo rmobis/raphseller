@@ -17,7 +17,8 @@ class AnnotationsServiceProvider extends ServiceProvider {
      * @var array
      */
     protected $scanRoutes = [
-        'App\Http\Controllers\OrdersController'
+        'App\Http\Controllers\OrdersController',
+        'App\Http\Controllers\HelpController',
     ];
 
     /**

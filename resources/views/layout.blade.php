@@ -44,7 +44,7 @@
 										<a href="{{ route('order.create') }}">{{ trans('header.menu-store') }}</a>
 									</li>
 									<li @if(Route::is('help.index')) class="active" @endif>
-										<a href="#">{{ trans('header.menu-help') }}</a>
+										<a href="{{ route('help.index') }}">{{ trans('header.menu-help') }}</a>
 									</li>
 								</ul>
 							</nav>
