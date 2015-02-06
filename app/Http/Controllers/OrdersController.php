@@ -81,7 +81,7 @@ class OrdersController extends Controller {
 		$order = Order::find($payment->getTransactions()[0]->getInvoiceNumber());
 		$order->approve();
 
-		$response = $this->windbot->addLicenseDays($order->user, $order->days);
+		$response = $this->windbot->addLicenseDays($order->user, $order->license_days);
 		$status = $response->getStatus();
 
 		if ($status == WindResponse::STATUS_OK)
