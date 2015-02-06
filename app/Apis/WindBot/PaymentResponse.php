@@ -21,14 +21,14 @@ class PaymentResponse extends Response {
 		parent::__construct($response);
 
 		if (preg_match(
-			'/^Payment made successfully\. Remaining balance: (\-?\d+) \/ \-200 BRL$/',
+			'/^Payment made successfully\. Remaining balance: (\-?\d+) \/ \-\d+ BRL$/',
 			$this->getBody(),
-			$matches
+			$matches	
 		)) {
 			$this->status = self::STATUS_OK;
 			$this->balance = intval($matches[1]);
 		} else if (preg_match(
-			'/^Not enough money to make this purchase\. Remaining balance: (\-?\d+) \/ \-200 BRL$/',
+			'/^Not enough money to make this purchase\. Remaining balance: (\-?\d+) \/ \-\d+ BRL$/',
 			$this->getBody(),
 			$matches
 		)) {
