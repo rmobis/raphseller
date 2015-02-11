@@ -5,11 +5,11 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "5.0.*@dev",
-		"illuminate/html": "5.0.*@dev",
-		"adamgoose/laravel-annotations": "5.0.*@dev",
-		"barryvdh/laravel-debugbar": "2.0.*@dev",
-		"graham-campbell/exceptions": "0.1.*@dev",
+		"laravel/framework": "~5.0.0",
+		"illuminate/html": "~5.0.0",
+		"laravelcollective/annotations": "~5.0.0",
+		"barryvdh/laravel-debugbar": "~2.0.0",
+		"graham-campbell/exceptions": "~1.0.0",
 		"paypal/rest-api-sdk-php": "~1.1.0",
 		"guzzlehttp/guzzle": "~5.2.0"
 	},
