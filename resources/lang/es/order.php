@@ -18,7 +18,7 @@ return [
 	'usernamePlaceholder' => 'Nombre de Foro',
 	'failWarning'         => 'Su pago no fue aceptado, no hay problema, puedes volver e intentar mas tarde.',
 
-	'stepOne'             => 'Escoje tu licencia.',
+	'stepOne'             => 'Elije su licencia.',
 	'stepTwo'             => 'Dinos tu e-mail.',
 	'stepThree'           => 'Dinos tu nombre de foro.',
 	'stepFour'            => 'Haga su pago.',
