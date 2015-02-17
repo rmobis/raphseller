@@ -13,7 +13,7 @@ class InternationalizationServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$accept = (new AcceptFactory($_SERVER))->newInstance();
-		$language = $accept->negotiateLanguage(['en', 'pl']);
+		$language = $accept->negotiateLanguage(['en', 'pl', 'es']);
 
 		if ($language) {
 			$this->app['translator']->setLocale($language->getValue());

@@ -105,9 +105,9 @@ return [
 	*/
 
 	'attributes' => [
-		'license-days' => 'license days amount',
-		'email'        => 'e-mail address',
-		'username'     => 'forum username',
+		'license-days' => 'cantidade de dias',
+		'email'        => 'email',
+		'username'     => 'nombre de foro',
 	],
 
 ];

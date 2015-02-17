@@ -6,9 +6,9 @@ developed by some cool people.
 
 ## Todo
 
+- Enable cookie based localization with in-site choice.
 - Add better error handling for PayPal API calls.
 - Prevent purchases when low remaining balance.
-- Enable localization for Spanish.
 - Add PHP Code Sniffer checks.
 - Possibly block TOR users.
 - Send email reports.
