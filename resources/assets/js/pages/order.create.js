@@ -87,4 +87,9 @@ $(function() {
 
 	/* Start at the beginning */
 	stepOne();
+
+	/* In case we sent input back */
+	if (hiddenDays.val()) {
+		licenses.filter('[data-days=' + hiddenDays.val() + ']').trigger('click');
+	}
 });

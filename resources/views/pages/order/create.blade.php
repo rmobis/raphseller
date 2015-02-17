@@ -5,7 +5,7 @@
 	{!! Form::open(['route' => 'order.store']) !!}
 		<h1 class="cover-heading">{{ trans('order.stepOne') }}</h1>
 		<div class="step step-one">
-			<input type="hidden" id="license-days" name="license-days">
+			{!! Form::hidden('license-days', null, ['id' => 'license-days']) !!}
 			<div class="license" data-days="30">
 				<p>WindBot - {{ trans('order.licenseDays', ['days' => 30]) }}</p>
 				<img src="/img/windbot-logo.png">

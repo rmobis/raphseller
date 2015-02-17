@@ -10,7 +10,7 @@ class StoreOrderRequest extends Request {
 	 *
 	 * @var array
 	 */
-	protected $dontFlash = ['license-days', 'email', 'username'];
+	protected $dontFlash = [];
 
 	/**
 	 * Determine if the user is authorized to make this request.
