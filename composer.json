@@ -11,7 +11,8 @@
 		"barryvdh/laravel-debugbar": "~2.0.0",
 		"graham-campbell/exceptions": "~1.0.0",
 		"paypal/rest-api-sdk-php": "~1.1.0",
-		"guzzlehttp/guzzle": "~5.2.0"
+		"guzzlehttp/guzzle": "~5.2.0",
+		"aura/accept": "~2.1.0"
 	},
 	"require-dev": {
 	},

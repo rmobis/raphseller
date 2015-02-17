@@ -8,7 +8,7 @@ developed by some cool people.
 
 - Add better error handling for PayPal API calls.
 - Prevent purchases when low remaining balance.
-- Enable localization for Polish and Spanish.
+- Enable localization for Spanish.
 - Add PHP Code Sniffer checks.
 - Send email reports.
 - Make Help page.

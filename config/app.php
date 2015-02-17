@@ -150,6 +150,7 @@ return [
 		'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
+		'App\Providers\InternationalizationServiceProvider',
 		'App\Providers\RouteServiceProvider',
 		'App\Providers\SchemaServiceProvider',
 		'App\Providers\AnnotationsServiceProvider',
