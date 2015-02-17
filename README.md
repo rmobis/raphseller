@@ -10,5 +10,6 @@ developed by some cool people.
 - Prevent purchases when low remaining balance.
 - Enable localization for Spanish.
 - Add PHP Code Sniffer checks.
+- Possibly block TOR users.
 - Send email reports.
 - Make Help page.
