@@ -10,7 +10,7 @@
 		"laravelcollective/annotations": "~5.0.0",
 		"barryvdh/laravel-debugbar": "~2.0.0",
 		"graham-campbell/exceptions": "~1.0.0",
-		"paypal/rest-api-sdk-php": "~1.1.0",
+		"paypal/rest-api-sdk-php": "~1.2.1",
 		"guzzlehttp/guzzle": "~5.2.0",
 		"aura/accept": "~2.1.0"
 	},
