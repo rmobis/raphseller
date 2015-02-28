@@ -5,14 +5,14 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "~5.0.0",
-		"illuminate/html": "~5.0.0",
-		"laravelcollective/annotations": "~5.0.0",
-		"barryvdh/laravel-debugbar": "~2.0.0",
-		"graham-campbell/exceptions": "~1.0.0",
-		"paypal/rest-api-sdk-php": "~1.2.1",
-		"guzzlehttp/guzzle": "~5.2.0",
-		"aura/accept": "~2.1.0"
+		"laravel/framework": "~5.0",
+		"illuminate/html": "~5.0",
+		"laravelcollective/annotations": "~5.0",
+		"barryvdh/laravel-debugbar": "~2.0",
+		"graham-campbell/exceptions": "~1.0",
+		"paypal/rest-api-sdk-php": "~1.2",
+		"guzzlehttp/guzzle": "~5.2",
+		"aura/accept": "~2.1"
 	},
 	"require-dev": {
 	},

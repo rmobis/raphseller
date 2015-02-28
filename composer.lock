@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b399c264b1c1b45e3be530c283b9b892",
+    "hash": "debaeef05b88eb25554c2401d0dbbcb4",
     "packages": [
         {
             "name": "aura/accept",
@@ -1496,16 +1496,16 @@
         },
         {
             "name": "paypal/rest-api-sdk-php",
-            "version": "v1.2.1",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paypal/PayPal-PHP-SDK.git",
-                "reference": "cfe4d728e845b94ad5dae86276ee0c5b2e9f6b48"
+                "reference": "7f51b58b69d8f0cbba5c79b64dd9bef5ef6fc753"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paypal/PayPal-PHP-SDK/zipball/cfe4d728e845b94ad5dae86276ee0c5b2e9f6b48",
-                "reference": "cfe4d728e845b94ad5dae86276ee0c5b2e9f6b48",
+                "url": "https://api.github.com/repos/paypal/PayPal-PHP-SDK/zipball/7f51b58b69d8f0cbba5c79b64dd9bef5ef6fc753",
+                "reference": "7f51b58b69d8f0cbba5c79b64dd9bef5ef6fc753",
                 "shasum": ""
             },
             "require": {
@@ -1540,7 +1540,7 @@
                 "rest",
                 "sdk"
             ],
-            "time": "2015-02-24 03:32:13"
+            "time": "2015-02-27 22:45:52"
         },
         {
             "name": "psr/log",
