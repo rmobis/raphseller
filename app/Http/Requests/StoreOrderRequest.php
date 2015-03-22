@@ -41,7 +41,7 @@ class StoreOrderRequest extends Request {
 			],
 			'username' => [
 				'required',
-				'regex:/^[ a-zA-z]{3,}$/',
+				'regex:/^[ a-zA-z0-9]{3,}$/',
 				'user',
 			],
 		];
